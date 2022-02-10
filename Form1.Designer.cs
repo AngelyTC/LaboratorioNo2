@@ -51,7 +51,7 @@ namespace LaboratorioNo2
             this.navegarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1138, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1401, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -125,7 +125,7 @@ namespace LaboratorioNo2
             this.webBrowser1.Location = new System.Drawing.Point(30, 117);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(814, 433);
+            this.webBrowser1.Size = new System.Drawing.Size(1359, 504);
             this.webBrowser1.TabIndex = 3;
             // 
             // label1
@@ -142,7 +142,7 @@ namespace LaboratorioNo2
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1138, 596);
+            this.ClientSize = new System.Drawing.Size(1401, 704);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.btnIr);
