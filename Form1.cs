@@ -21,6 +21,9 @@ namespace LaboratorioNo2
         {
             String uri = cmb1.Text;
 
+            //Angely Esmeralda Thomas Cortéz -  202108047 - Ingeniería en Sistemas 
+            //Tercer Semestre Universidad Mesoamericana, Programación
+
             //condicion para url
             if (uri.Contains("."))
             {
