@@ -69,28 +69,28 @@ namespace LaboratorioNo2
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // haciaAtrásToolStripMenuItem
             // 
             this.haciaAtrásToolStripMenuItem.Name = "haciaAtrásToolStripMenuItem";
-            this.haciaAtrásToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.haciaAtrásToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
             this.haciaAtrásToolStripMenuItem.Text = "Hacia Atrás";
             this.haciaAtrásToolStripMenuItem.Click += new System.EventHandler(this.haciaAtrásToolStripMenuItem_Click);
             // 
             // haciaAdelanteToolStripMenuItem
             // 
             this.haciaAdelanteToolStripMenuItem.Name = "haciaAdelanteToolStripMenuItem";
-            this.haciaAdelanteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.haciaAdelanteToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
             this.haciaAdelanteToolStripMenuItem.Text = "Hacia Adelante";
             this.haciaAdelanteToolStripMenuItem.Click += new System.EventHandler(this.haciaAdelanteToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(232, 34);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -103,7 +103,8 @@ namespace LaboratorioNo2
             "https://definicion.de/",
             "https://profile.es/blog/que-es-la-programacion-orientada-a-objetos/",
             "https://www.google.com/?hl=es",
-            "https://www.mesoamericana.edu.gt/"});
+            "https://www.mesoamericana.edu.gt/",
+            "translate.google.com/?hl=es"});
             this.cmb1.Location = new System.Drawing.Point(84, 50);
             this.cmb1.Name = "cmb1";
             this.cmb1.Size = new System.Drawing.Size(530, 28);
