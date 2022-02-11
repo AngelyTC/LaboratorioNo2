@@ -44,7 +44,8 @@ namespace LaboratorioNo2
             }
             else
             {
-                webBrowser1.Navigate(new Uri("https://www.google.com/?hl=es"));
+                uri = "http://www.google.com/search?q=" + uri;
+                webBrowser1.Navigate(new Uri(uri));
             }
        
         }
