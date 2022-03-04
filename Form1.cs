@@ -15,6 +15,7 @@ namespace LaboratorioNo2
     public partial class Form1 : Form
     {
         int veces = 0;
+
         List<string> fav = new List<string>();
         public Form1()
         {
@@ -115,17 +116,9 @@ namespace LaboratorioNo2
      
         private void másVisitadasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fav.Add(webBrowser1.Url.ToString());
-            actualizar();
+            
         }
 
-        private void actualizar()
-        {
-            cmbBuscar.Items.Clear();
-            foreach(string direccion in fav)
-            {
-                cmbBuscar.Items.Add(direccion);
-            }
-        }
+      
     }
 }
