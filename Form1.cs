@@ -15,8 +15,8 @@ namespace LaboratorioNo2
     public partial class Form1 : Form
     {
         int veces = 0;
-
-        List<string> fav = new List<string>();
+        List<url> datos = new List<url>();
+        url dato = new url();
         public Form1()
         {
             InitializeComponent();
@@ -49,20 +49,43 @@ namespace LaboratorioNo2
                 webBrowser1.Navigate(new Uri(uri));
             }
 
-            //Para guardar urls sin repetir            
-            for (int i = 0; i < cmbBuscar.Items.Count; i++)
+            int pos = datos.FindIndex(n => n.urlVisitada == cmbBuscar.Text);
+            //si no existe lo creamos y lo agregamos a la lista
+            if (pos == -1)
             {
-                if (cmbBuscar.Items[i].ToString() == uri)
-                {
-                    veces++;
-                }
+                dato.ves = veces++;
+                dato.urlVisitada = cmbBuscar.Text;
+                dato.Fecha = DateTime.Now;
+                
+                datos.Add(dato);
+
             }
-            if (veces == 0)
+            else
             {
-                cmbBuscar.Items.Add(uri);
-                Guardar(@"C:\ArchivoLab3.txt", uri);
+                datos[pos].ves++;
             }
 
+
+           /*  //Para guardar urls sin repetir            
+             for (int i = 0; i < cmbBuscar.Items.Count; i++)
+             {
+                 if (cmbBuscar.Items[i].ToString() == uri)
+                 {
+                     veces++;
+                 }
+             }
+             if (veces == 0)
+             {
+                 cmbBuscar.Items.Add(uri);
+                 Guardar(@"C:\ArchivoLab3.txt", uri);
+             }*/
+
+        }
+
+        private void Mostrar()
+        {
+            cmbBuscar.Items.Add(datos);
+            Guardar("ArchivoLab3.txt", cmbBuscar.Text);
         }
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,17 +110,16 @@ namespace LaboratorioNo2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cmbBuscar.SelectedIndex = 0;
+            //cmbBuscar.SelectedIndex = 0;
             webBrowser1.GoHome();
-            string nombreArchivo = @"C:\ArchivoLab3.txt";
+            string nombreArchivo = "ArchivoLab3.txt";
 
             FileStream stream = new FileStream(nombreArchivo, FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(stream);
 
             while (reader.Peek() > -1)
             {
-                string texto = reader.ReadLine();
-                cmbBuscar.Items.Add(texto);
+                cmbBuscar.Items.Add(dato);
             }
             reader.Close();
         }
@@ -108,7 +130,7 @@ namespace LaboratorioNo2
 
             StreamWriter writer = new StreamWriter(stream);
 
-            writer.WriteLine(texto);
+            writer.WriteLine(dato);
 
             writer.Close();
         }
@@ -116,9 +138,19 @@ namespace LaboratorioNo2
      
         private void másVisitadasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            datos = datos.OrderBy(n => n.ves).ToList();
+            Mostrar();
         }
 
-      
+        private void historialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ménosVisitadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            datos = datos.OrderBy(f => f.Fecha).ToList();
+            Mostrar();
+        }
     }
 }

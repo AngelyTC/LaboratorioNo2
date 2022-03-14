@@ -35,13 +35,12 @@ namespace LaboratorioNo2
             this.haciaAtrásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.haciaAdelanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmbBuscar = new System.Windows.Forms.ComboBox();
-            this.btnIr = new System.Windows.Forms.Button();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.label1 = new System.Windows.Forms.Label();
             this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.másVisitadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ménosVisitadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmbBuscar = new System.Windows.Forms.ComboBox();
+            this.btnIr = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +97,30 @@ namespace LaboratorioNo2
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // historialToolStripMenuItem
+            // 
+            this.historialToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.másVisitadasToolStripMenuItem,
+            this.ménosVisitadasToolStripMenuItem});
+            this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
+            this.historialToolStripMenuItem.Text = "Historial";
+            this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
+            // 
+            // másVisitadasToolStripMenuItem
+            // 
+            this.másVisitadasToolStripMenuItem.Name = "másVisitadasToolStripMenuItem";
+            this.másVisitadasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.másVisitadasToolStripMenuItem.Text = "Más Visitadas";
+            this.másVisitadasToolStripMenuItem.Click += new System.EventHandler(this.másVisitadasToolStripMenuItem_Click);
+            // 
+            // ménosVisitadasToolStripMenuItem
+            // 
+            this.ménosVisitadasToolStripMenuItem.Name = "ménosVisitadasToolStripMenuItem";
+            this.ménosVisitadasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.ménosVisitadasToolStripMenuItem.Text = " Más Recientes";
+            this.ménosVisitadasToolStripMenuItem.Click += new System.EventHandler(this.ménosVisitadasToolStripMenuItem_Click);
+            // 
             // cmbBuscar
             // 
             this.cmbBuscar.FormattingEnabled = true;
@@ -125,44 +148,12 @@ namespace LaboratorioNo2
             this.webBrowser1.Size = new System.Drawing.Size(1359, 504);
             this.webBrowser1.TabIndex = 3;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(717, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = ".";
-            // 
-            // historialToolStripMenuItem
-            // 
-            this.historialToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.másVisitadasToolStripMenuItem,
-            this.ménosVisitadasToolStripMenuItem});
-            this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
-            this.historialToolStripMenuItem.Text = "Historial";
-            // 
-            // másVisitadasToolStripMenuItem
-            // 
-            this.másVisitadasToolStripMenuItem.Name = "másVisitadasToolStripMenuItem";
-            this.másVisitadasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.másVisitadasToolStripMenuItem.Text = "Más Visitadas";
-            this.másVisitadasToolStripMenuItem.Click += new System.EventHandler(this.másVisitadasToolStripMenuItem_Click);
-            // 
-            // ménosVisitadasToolStripMenuItem
-            // 
-            this.ménosVisitadasToolStripMenuItem.Name = "ménosVisitadasToolStripMenuItem";
-            this.ménosVisitadasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.ménosVisitadasToolStripMenuItem.Text = " Más Recientes";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1401, 704);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.btnIr);
             this.Controls.Add(this.cmbBuscar);
@@ -189,7 +180,6 @@ namespace LaboratorioNo2
         private System.Windows.Forms.ComboBox cmbBuscar;
         private System.Windows.Forms.Button btnIr;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem másVisitadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ménosVisitadasToolStripMenuItem;
